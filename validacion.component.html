@@ -1,0 +1,22 @@
+
+<p>validacion.</p>
+
+
+
+
+<form [formGroup]="userForm" (ngsubmit)="onSubmit()" novalidate>
+  <label for="name">Name</label>
+  <input type="text" [formControl]="detailsForm.get('Name')" [class.invalid]="!detai" id="name" />
+
+  <label for="email">Email</label>
+  <input formControlName="email" id="email" />
+
+  <label for="profile">Profile Description</label>
+  <input formControlName="profile" id="profile"/>
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>
+
+
+
+
